@@ -2,9 +2,7 @@
 
 <template>
   <div class="w-full p-4">
-    <!-- Responsive Grid -->
     <div class="grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-20 items-center">
-      <!-- TEXT -->
       <div class="flex flex-col gap-2 col-span-2 order-2 md:order-1">
         <div class="text-lg md:text-xl">Hi I am,</div>
 
@@ -27,7 +25,6 @@
         </div>
       </div>
 
-      <!-- PHOTO -->
       <div
         class="relative w-40 h-40 md:w-60 md:h-60 mx-auto order-1 md:order-2"
       >

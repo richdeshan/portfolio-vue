@@ -3,15 +3,22 @@ import { ref } from "vue";
 import Button from "../ui/button/Button.vue";
 
 const open = ref(false);
+
+const downloadCV = () => {
+  const link = document.createElement("a");
+  link.href = "/file/Rich-Deshan-Djuardi-Front-End-Developer-Resume-CV.pdf";
+  link.download = "Rich Deshan Djuardi - Resume.pdf"; 
+  document.body.appendChild(link);
+  link.click();
+  document.body.removeChild(link);
+};
 </script>
 
 <template>
   <header class="w-full py-4 px-6">
     <div class="flex items-center justify-between">
-      <!-- LOGO -->
       <div class="text-gray-500 font-semibold text-xl">RICH DESHAN DJUARDI</div>
 
-      <!-- DESKTOP MENU -->
       <div class="hidden md:flex items-center gap-6">
         <div class="font-light cursor-pointer hover:text-orange-500">Home</div>
         <div class="font-light cursor-pointer hover:text-orange-500">
@@ -26,12 +33,11 @@ const open = ref(false);
         <div class="font-light cursor-pointer hover:text-orange-500">
           Contacts
         </div>
-        <Button class="bg-orange-500 hover:bg-orange-300 text-white px-4 py-2">
+        <Button class="bg-orange-500 hover:bg-orange-300 text-white px-4 py-2"  @click="downloadCV">
           Download CV
         </Button>
       </div>
 
-      <!-- MOBILE HAMBURGER -->
       <button class="md:hidden flex flex-col gap-1" @click="open = !open">
         <span class="w-6 h-[3px] bg-gray-700 rounded"></span>
         <span class="w-6 h-[3px] bg-gray-700 rounded"></span>
@@ -39,7 +45,6 @@ const open = ref(false);
       </button>
     </div>
 
-    <!-- MOBILE DROPDOWN MENU -->
     <transition name="fade">
       <div
         v-if="open"
@@ -61,6 +66,7 @@ const open = ref(false);
 
         <Button
           class="bg-orange-500 hover:bg-orange-300 text-white w-full py-2"
+          @click="downloadCV"
         >
           Download CV
         </Button>

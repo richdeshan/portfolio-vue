@@ -43,9 +43,9 @@ console.log(data);
 </script>
 
 <template>
-  <div class="flex flex-col items-center justify-center mt-6">
+  <div class="flex flex-col items-center justify-center mt-10">
     <div class="font-bold text-5xl">My Projects</div>
-    <div>Here are some of the projects I’ve worked on.</div>
+    <div class="my-6">Here are some of the projects I’ve worked on.</div>
     <div class="flex w-full flex-col gap-6 justify-center">
       <Tabs defaultValue="ifca">
         <TabsList>
