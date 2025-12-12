@@ -1,0 +1,30 @@
+[
+  {
+    "project_name": "Site Plan",
+    "images": [
+      "/projects-images/siteplan-booking.png",
+      "/projects-images/siteplan-editor.png",
+      "/projects-images/siteplan-booking-form.png"
+    ],
+    "description": "A dynamic warehouse site plan built using React Konva, featuring an interactive editor, color mapping, tooltips, and clickable lot areas to help clients manage warehouse units efficiently."
+  },
+  {
+    "project_name": "E-Signature Module",
+    "images": [
+      "/projects-images/e-signature-dashboard.png",
+      "/projects-images/e-signature-add-user.png",
+      "/projects-images/e-sign-setup.png",
+      "/projects-images/e-sign-signing.png",
+      "/projects-images/kyc-email.png"
+    ],
+    "description": "A digital e-signature workflow that enables document uploads, digital signing, approval tracking, and user-friendly document management."
+  },
+  {
+    "project_name": "Product Management Dashboard",
+    "images": [
+      "/images/product-dashboard-1.png",
+      "/images/product-dashboard-2.png"
+    ],
+    "description": "A full product management system created using Next.js, TanStack Query, REST APIs, and shadcn/ui including CRUD, search filters, pagination, and validation using Zod."
+  }
+]
