@@ -20,12 +20,12 @@
     "description": "A digital e-signature workflow that enables document uploads, digital signing, approval tracking, and user-friendly document management."
   },
   {
-    "project_name": "Product Management Dashboard",
+    "project_name": "Land Management Dashboard",
     "images": [
       "/projects-images/land-map-system.png",
       "/projects-images/assign-placemark.png",
       "/projects-images/detail-placemark.png"
     ],
-    "description": "A full product management system created using Next.js, TanStack Query, REST APIs, and shadcn/ui including CRUD, search filters, pagination, and validation using Zod."
+    "description": "A full land management system created using Next.js, TanStack Query, REST APIs, and shadcn/ui including CRUD, search filters, pagination, and validation using Zod."
   }
 ]
