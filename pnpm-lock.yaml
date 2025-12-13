@@ -32,6 +32,12 @@ importers:
       tailwindcss-animate:
         specifier: ^1.0.7
         version: 1.0.7(tailwindcss@3.4.19)
+      vite:
+        specifier: ^7.2.4
+        version: 7.2.7(jiti@1.21.7)
+      vite-plugin-vue-devtools:
+        specifier: ^8.0.5
+        version: 8.0.5(vite@7.2.7(jiti@1.21.7))(vue@3.5.25(typescript@5.9.3))
       vue:
         specifier: ^3.5.25
         version: 3.5.25(typescript@5.9.3)
@@ -51,12 +57,6 @@ importers:
       typescript:
         specifier: ^5.9.3
         version: 5.9.3
-      vite:
-        specifier: ^7.2.4
-        version: 7.2.7(jiti@1.21.7)
-      vite-plugin-vue-devtools:
-        specifier: ^8.0.5
-        version: 8.0.5(vite@7.2.7(jiti@1.21.7))(vue@3.5.25(typescript@5.9.3))
 
 packages:
 
