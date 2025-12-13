@@ -1,34 +1,50 @@
-<script setup>
+<script setup lang="ts">
 import { ref } from "vue";
-import experience from "@/data/experience.json"; // sesuaikan path jika berbeda
+import experience from "@/data/experience.json";
 
-const experiences = ref(
-  experience.map((exp) => {
-    if (exp.endDate.toLowerCase() === "present") {
-      exp.duration = calculateDuration(exp.startDate);
-    }
-    return exp;
-  })
-);
+interface Experience {
+  company: string;
+  description: string;
+  startDate: string; 
+  endDate: string;
+  images: string[];
+  duration?: string;
+}
+function parseDateSafely(dateStr: string): Date {
+  const [year, month] = dateStr.split("-").map(Number);
 
-function calculateDuration(startDateStr) {
-  const start = new Date(startDateStr);
-  const now = new Date();
+  if (!year || !month) {
+    throw new Error(`Invalid date format: ${dateStr}`);
+  }
 
-  let years = now.getFullYear() - start.getFullYear();
-  let months = now.getMonth() - start.getMonth();
+  return new Date(year, month - 1, 1);
+}
+
+function calculateDuration(startDateStr: string): string {
+  const start: Date = parseDateSafely(startDateStr);
+  const now: Date = new Date();
+
+  let years: number = now.getFullYear() - start.getFullYear();
+  let months: number = now.getMonth() - start.getMonth();
 
   if (months < 0) {
     years--;
     months += 12;
   }
 
-  let durationStr = "";
-  if (years > 0) durationStr += `${years} year${years > 1 ? "s" : ""} `;
-  if (months > 0) durationStr += `${months} month${months > 1 ? "s" : ""}`;
+  const yearText = years > 0 ? `${years} year${years > 1 ? "s" : ""}` : "";
+  const monthText = months > 0 ? `${months} month${months > 1 ? "s" : ""}` : "";
 
-  return durationStr.trim() || "0 month";
+  return [monthText, yearText].filter(Boolean).join(" ") || "0 month";
 }
+const experiences = ref<Experience[]>(
+  (experience as Experience[]).map((exp) => {
+    if (exp.endDate.toLowerCase() === "present") {
+      exp.duration = calculateDuration(exp.startDate);
+    }
+    return exp;
+  })
+);
 </script>
 
 <template>
@@ -50,7 +66,7 @@ function calculateDuration(startDateStr) {
         <div class="font-semibold text-lg text-center">{{ exp.company }}</div>
         <div class="text-gray-500 text-center">{{ exp.description }}</div>
         <div class="text-gray-400 text-sm text-center">
-          {{ exp.startDate }} - {{ exp.endDate }} ({{ exp.duration }})
+          {{ exp.startDate }} to {{ exp.endDate }} ({{ exp.duration }})
         </div>
       </div>
     </div>
