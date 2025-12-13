@@ -22,8 +22,9 @@
   {
     "project_name": "Product Management Dashboard",
     "images": [
-      "/images/product-dashboard-1.png",
-      "/images/product-dashboard-2.png"
+      "/projects-images/land-map-system.png",
+      "/projects-images/assign-placemark.png",
+      "/projects-images/detail-placemark.png"
     ],
     "description": "A full product management system created using Next.js, TanStack Query, REST APIs, and shadcn/ui including CRUD, search filters, pagination, and validation using Zod."
   }
