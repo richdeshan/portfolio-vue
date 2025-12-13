@@ -17,8 +17,8 @@ const contacts = [
   },
   {
     label: "GitHub",
-    value: "starspen",
-    href: "https://github.com/starspen",
+    value: "richdeshan",
+    href: "https://github.com/richdeshan",
   },
 ];
 </script>
