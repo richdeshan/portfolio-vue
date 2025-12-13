@@ -1,33 +1,27 @@
 [
   {
-    "company": "Sinarmas Land",
-    "images": [
-      "/experience-images/SML.png"
-    ],
-    "description": "Internship",
-    "startDate": "July 2023",
-    "endDate": "December 2023",
-    "duration": "6 months"
+    "company": "IFCA Software",
+    "images": ["/experience-images/ifca.png"],
+    "description": "Full Time",
+    "startDate": "October 2025",
+    "endDate": "Present",
+    "duration": "1 year"
   },
   {
     "company": "IFCA Software",
-    "images": [
-      "/experience-images/ifca.png"
-    ],
+    "images": ["/experience-images/ifca.png"],
     "description": "Contract",
     "startDate": "October 2024",
     "endDate": "October 2025",
     "duration": "1 year"
   },
+
   {
-    "company": "IFCA Software",
-    "images": [
-      "/experience-images/ifca.png"
-    ],
-    "description": "Full Time",
-    "startDate": "October 2025",
-    "endDate": "Present",
-    "duration": "1 year"
+    "company": "Sinarmas Land",
+    "images": ["/experience-images/SML.png"],
+    "description": "Internship",
+    "startDate": "July 2023",
+    "endDate": "December 2023",
+    "duration": "6 months"
   }
- 
 ]
