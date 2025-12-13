@@ -3,7 +3,7 @@ import AboutMe from "./components/body/AboutMe.vue";
 import Experience from "./components/body/Experience.vue";
 import Introduction from "./components/body/Introduction.vue";
 import Projects from "./components/body/Projects.vue";
-import Footer from "./components/footer/footer.vue";
+import Footer from "./components/footer/Footer.vue";
 import Header from "./components/header/Header.vue";
 </script>
 
