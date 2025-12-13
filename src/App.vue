@@ -5,6 +5,15 @@ import Introduction from "./components/body/Introduction.vue";
 import Projects from "./components/body/Projects.vue";
 import Footer from "./components/footer/Footer.vue";
 import Header from "./components/header/Header.vue";
+
+const downloadCV = () => {
+  const link = document.createElement("a");
+  link.href = "/file/Rich-Deshan-Djuardi-Front-End-Developer-Resume-CV.pdf";
+  link.download = "Rich Deshan Djuardi - Resume.pdf";
+  document.body.appendChild(link);
+  link.click();
+  document.body.removeChild(link);
+};
 </script>
 
 <template>
@@ -50,8 +59,7 @@ import Header from "./components/header/Header.vue";
             </section>
 
             <section id="contacts">
-              <footer>
-              </footer>
+              <footer></footer>
             </section>
           </div>
         </div>
@@ -60,8 +68,14 @@ import Header from "./components/header/Header.vue";
       <footer
         class="w-full border-t border-orange-100/70 bg-white/50 backdrop-blur-md"
       >
-       <Footer />
+        <Footer />
       </footer>
     </div>
   </div>
+  <button
+    @click="downloadCV"
+    class="fixed bottom-5 right-5 z-50 flex items-center gap-2 rounded-full bg-orange-500 text-white px-4 py-3 text-sm font-semibold shadow-lg shadow-orange-300/40 active:scale-95 transition md:hidden"
+  >
+    Download CV
+  </button>
 </template>
