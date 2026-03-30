@@ -7,8 +7,8 @@ const open = ref(false);
 // Download CV
 const downloadCV = () => {
   const link = document.createElement("a");
-  link.href = "/file/Rich-Deshan-Djuardi-Front-End-Developer-Resume-CV.pdf";
-  link.download = "Rich Deshan Djuardi - Resume.pdf"; 
+  link.href = "/file/Rich Deshan Djuardi ResumeCV.pdf";
+  link.download = "Rich Deshan Djuardi - Resume.pdf";
   document.body.appendChild(link);
   link.click();
   document.body.removeChild(link);

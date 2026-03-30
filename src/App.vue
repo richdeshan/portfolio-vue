@@ -8,7 +8,7 @@ import Header from "./components/header/Header.vue";
 
 const downloadCV = () => {
   const link = document.createElement("a");
-  link.href = "/file/Rich-Deshan-Djuardi-Front-End-Developer-Resume-CV.pdf";
+  link.href = "/file/Rich Deshan Djuardi ResumeCV.pdf";
   link.download = "Rich Deshan Djuardi - Resume.pdf";
   document.body.appendChild(link);
   link.click();
@@ -23,7 +23,7 @@ const downloadCV = () => {
     <div
       class="absolute inset-0 opacity-[0.25] pointer-events-none"
       style="
-        background-image: url('https://grainy-gradients.vercel.app/noise.svg');
+        background-image: url(&quot;https://grainy-gradients.vercel.app/noise.svg&quot;);
         mix-blend-mode: soft-light;
       "
     ></div>
